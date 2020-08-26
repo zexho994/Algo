@@ -1,7 +1,7 @@
 package leetcode.easy;
 
 /**
- * @description: 1025. 除数博弈
+ * 1025. 除数博弈
  * @author: zexho
  * @created: 2020/07/24 08:51
  */
