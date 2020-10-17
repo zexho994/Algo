@@ -7,6 +7,7 @@ package struct.ListNode;
 public class ListNode {
     public int val;
     public ListNode next;
+    public ListNode(){}
     public ListNode(int v){
         this.val = v;
     }
