@@ -4,7 +4,7 @@ type NumMatrix struct {
 	sums [][]int
 }
 
-func Constructor(matrix [][]int) NumMatrix {
+func Constructor1(matrix [][]int) NumMatrix {
 	sums := make([][]int, len(matrix))
 	for i, row := range matrix {
 		sums[i] = make([]int, len(row)+1)
