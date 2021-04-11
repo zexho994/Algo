@@ -1,24 +1,18 @@
 package interview
 
 func maxSubArray(nums []int) int {
-	if nums == nil || len(nums) < 1 {
-		return 0
-	}
-	max, idx, sum := nums[0], 0, 0
-	l := len(nums)
-	dp := func() int { return 0 }
-	dp = func() int {
-		if idx == l {
-			return max
+	memo := make([]int, len(nums))
+	memo[0] = nums[0]
+	max := nums[0]
+	for i := 1; i < len(nums); i++ {
+		if memo[i-1] > 0 {
+			memo[i] = nums[i] + memo[i-1]
+		} else {
+			memo[i] = nums[i]
 		}
-		sum += nums[idx]
-		if sum < 0 {
-			sum = 0
-		} else if sum > max {
-			max = sum
+		if memo[i] > max {
+			max = memo[i]
 		}
-		idx++
-		return dp()
 	}
-	return dp()
+	return max
 }
