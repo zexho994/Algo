@@ -132,3 +132,21 @@ func maxProfit4(k int, prices []int) int {
 	}
 	return max
 }
+
+// 剑指 Offer 63. 股票的最大利润
+func maxProfit5(prices []int) int {
+	if prices == nil || len(prices) < 2 {
+		return 0
+	}
+	min := prices[0]
+	maxProfit := 0
+	for i := 1; i < len(prices); i++ {
+		if r := prices[i] - min; r > maxProfit {
+			maxProfit = r
+		}
+		if prices[i] < min {
+			min = prices[i]
+		}
+	}
+	return maxProfit
+}
