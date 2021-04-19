@@ -1,6 +1,9 @@
 package lib
 
 func matcher(s1, s2 string) (i1, i2 int) {
+	if s1 == s2 || s2 == "" {
+		return 0, 0
+	}
 	pma := buildPMA(s2)
 	l1, l2 := len(s1)-1, len(s2)-1
 	for i := 0; i <= l1-l2; {

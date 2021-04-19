@@ -18,6 +18,8 @@ func Test_matcher(t *testing.T) {
 		{name: "t2", args: args{s1: "BBC ABCDAB ABCDABCDABDE", s2: "ABCDABD"}, wantI1: 15, wantI2: 21},
 		{name: "t3", args: args{s1: "#{name} invite you to attend the meeting on #{time}", s2: "#{name}"}, wantI1: 0, wantI2: 6},
 		{name: "t4", args: args{s1: "#{name} invite you to attend the meeting on #{time}", s2: "#{time}"}, wantI1: 44, wantI2: 50},
+		{name: "t5", args: args{s1: "", s2: ""}, wantI1: 0, wantI2: 0},
+		{name: "t6", args: args{s1: "a", s2: ""}, wantI1: 0, wantI2: 0},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
