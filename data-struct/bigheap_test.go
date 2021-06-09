@@ -31,6 +31,58 @@ func TestBigHeap_Push(t *testing.T) {
 	heap1.Push(97)
 }
 
+func TestBigHeap_Pop(t *testing.T) {
+	heap1 := NewBigHeap(mockArr1)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+}
+
+func TestBigHeap_Pop1(t *testing.T) {
+	heap1 := NewBigHeap(mockArr2)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+	heap1.Pop()
+	checkBigHeap(0, heap1.data)
+}
+
 func checkBigHeap(i int, arr []int) {
 	if i >= len(arr) {
 		return

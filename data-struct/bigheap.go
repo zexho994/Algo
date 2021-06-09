@@ -53,6 +53,35 @@ func (heap *BigHeap) Push(n int) bool {
 	return true
 }
 
+// 弹出一个值，这个值是最大值
+// return 弹出的最大值
+func (heap *BigHeap) Pop() int {
+	size := len(heap.data)
+	swap(0, size-1, heap.data)
+	popVal := heap.data[size-1]
+	heap.data = heap.data[:size-1]
+	size--
+	i, r, l := 0, 0, 0
+
+	for i < size && i >= 0 {
+		l = i*2 + 1
+		if l >= size {
+			break
+		}
+		if r = l + 1; r < size && heap.data[r] > heap.data[l] {
+			l = r
+		}
+		if heap.data[i] < heap.data[l] {
+			swap(i, l, heap.data)
+		} else {
+			break
+		}
+		i = l
+	}
+
+	return popVal
+}
+
 // 确定叶子节点的数量=> num = len/2
 func getLeafCount(length int) int {
 	return length / 2
