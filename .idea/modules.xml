@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Algo.iml" filepath="$PROJECT_DIR$/.idea/Algo.iml" />
       <module fileurl="file://$PROJECT_DIR$/algo-java/algo-java.iml" filepath="$PROJECT_DIR$/algo-java/algo-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dp/dp.iml" filepath="$PROJECT_DIR$/dp/dp.iml" />
     </modules>
   </component>
 </project>
