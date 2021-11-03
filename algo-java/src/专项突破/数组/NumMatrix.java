@@ -5,17 +5,15 @@ package 专项突破.数组;
  * @date 2021/11/3 2:21 下午
  */
 public class NumMatrix {
-    int[][] preSum;
+    int[][] regionSum;
 
     public NumMatrix(int[][] matrix) {
-        this.preSum = new int[matrix.length][matrix[0].length];
+        this.regionSum = new int[matrix.length + 1][matrix[0].length + 1];
         for (int r = 0; r < matrix.length; r++) {
-            for (int c = 0; c < matrix[0].length; c++) {
-                if (c == 0) {
-                    preSum[r][0] = matrix[r][0];
-                } else {
-                    preSum[r][c] = preSum[r][c - 1] + matrix[r][c];
-                }
+            int rowSum = 0;
+            for (int c = 0; c < matrix.length; c++) {
+                rowSum += matrix[r][c];
+                this.regionSum[r + 1][c + 1] = rowSum + regionSum[r][c];
             }
         }
     }
@@ -37,21 +35,9 @@ public class NumMatrix {
      * @return 矩形内和
      */
     public int sumRegion(int row1, int col1, int row2, int col2) {
-        //col1 , col2 ==> pre[r][col2] - pre[r][col1-1]
-        // row1 -> row2
-        int region = 0;
-        if (col1 == 0) {
-            while (row1 <= row2) {
-                region += preSum[row1][col2];
-                row1++;
-            }
-        } else {
-            int c = col1 - 1;
-            while (row1 <= row2) {
-                region += preSum[row1][col2] - preSum[row1][c];
-                row1++;
-            }
-        }
-        return region;
+        return this.regionSum[row2 + 1][col2 + 1]
+                - this.regionSum[row2 + 1][col1]
+                - this.regionSum[row1][col2 + 1]
+                + this.regionSum[row1][col1];
     }
 }
