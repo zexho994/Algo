@@ -28,4 +28,24 @@ public class CountSubstrings {
         return 1;
     }
 
+    /**
+     * 方法二：基于中心向两边扩展
+     */
+
+    public int countSubstrings2(String s) {
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            count += judge2(s, i, i);
+            count += judge2(s, i, i + 1);
+        }
+        return count;
+    }
+
+    public int judge2(String s, int left, int right) {
+        int count = 0;
+        while (left >= 0 && right < s.length() && s.charAt(left--) == s.charAt(right++)) {
+            count++;
+        }
+        return count;
+    }
 }
