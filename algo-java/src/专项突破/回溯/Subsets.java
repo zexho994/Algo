@@ -10,8 +10,9 @@ import java.util.List;
 public class Subsets {
     public List<List<Integer>> subsets(int[] nums) {
         LinkedList<List<Integer>> result = new LinkedList<>();
-        result.add(new LinkedList<>());
-        loop(nums, result, new LinkedList<>(), 0);
+//        result.add(new LinkedList<>());
+//        loop(nums, result, new LinkedList<>(), 0);
+        loop2(nums,0,result,new LinkedList<>());
         return result;
     }
 
@@ -20,6 +21,17 @@ public class Subsets {
             subList.add(nums[i]);
             result.add(new LinkedList<>(subList));
             loop(nums, result, subList, i + 1);
+            subList.removeLast();
+        }
+    }
+
+    public void loop2(int[] nums, int idx, List<List<Integer>> result, LinkedList<Integer> subList) {
+        if (idx == nums.length) {
+            result.add(new LinkedList<>(subList));
+        } else {
+            loop2(nums, idx + 1, result, subList);
+            subList.add(nums[idx]);
+            loop2(nums, idx + 1, result, subList);
             subList.removeLast();
         }
     }
