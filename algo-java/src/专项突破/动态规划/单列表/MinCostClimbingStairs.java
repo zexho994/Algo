@@ -27,4 +27,15 @@ public class MinCostClimbingStairs {
         return Math.min(memo[len - 1], memo[len - 2]);
     }
 
+    /**
+     * 使用步数长度的数组
+     */
+    public int minCostClimbingStairs2(int[] cost) {
+        int[] memo = new int[2];
+        for (int i = 0; i < cost.length; i++) {
+            memo[i % 2] = Math.min(memo[0], memo[1]) + cost[i];
+        }
+        return Math.min(memo[0], memo[1]);
+    }
+
 }
