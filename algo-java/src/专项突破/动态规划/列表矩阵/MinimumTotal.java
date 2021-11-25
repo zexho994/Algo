@@ -35,4 +35,28 @@ public class MinimumTotal {
         return min;
     }
 
+    public int minimumTotal2(List<List<Integer>> triangle) {
+        int size = triangle.get(triangle.size() - 1).size();
+        int[][] arr = new int[2][size];
+        arr[0][0] = triangle.get(0).get(0);
+
+        for (int i = 1; i < triangle.size(); i++) {
+            List<Integer> row = triangle.get(i);
+            arr[i % 2][0] = arr[(i + 1) % 2][0] + row.get(0);
+            for (int j = 1; j < row.size(); j++) {
+                if (j == row.size() - 1) {
+                    arr[i % 2][j] = arr[(i + 1) % 2][j - 1] + row.get(j);
+                } else {
+                    arr[i % 2][j] = Math.min(arr[(i + 1) % 2][j - 1], arr[(i + 1) % 2][j]) + row.get(j);
+                }
+            }
+        }
+
+        // 获取最下一层的最小值
+        int min = Integer.MAX_VALUE;
+        for (int last : arr[(triangle.size() + 1) % 2]) {
+            min = Math.min(min, last);
+        }
+        return min;
+    }
 }
