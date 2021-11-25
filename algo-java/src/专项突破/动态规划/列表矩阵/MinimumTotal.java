@@ -59,4 +59,32 @@ public class MinimumTotal {
         }
         return min;
     }
+
+    /**
+     * 一维数组
+     */
+    public int minimumTotal3(List<List<Integer>> triangle) {
+        int[] arr = new int[triangle.get(triangle.size() - 1).size()];
+        for (List<Integer> row : triangle) {
+            int pre = arr[0];
+            arr[0] += row.get(0);
+            for (int j = 1; j < row.size(); j++) {
+                if (j == row.size() - 1) {
+                    arr[j] = pre + row.get(j);
+                } else {
+                    int n = Math.min(arr[j], pre) + row.get(j);
+                    pre = arr[j];
+                    arr[j] = n;
+                }
+            }
+        }
+
+        // 获取最下一层的最小值
+        int min = Integer.MAX_VALUE;
+        for (int last : arr) {
+            min = Math.min(min, last);
+        }
+        return min;
+    }
+
 }
