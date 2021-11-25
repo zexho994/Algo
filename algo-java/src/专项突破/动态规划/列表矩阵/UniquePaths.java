@@ -35,4 +35,19 @@ public class UniquePaths {
         }
         return arr[(m + 1) % 2][n - 1];
     }
+
+
+    /**
+     * n复杂度
+     */
+    public int uniquePaths3(int m, int n) {
+        int[] arr = new int[n];
+        arr[0] = 1;
+        for (int i = 0; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                arr[j] = arr[j - 1] + arr[j];
+            }
+        }
+        return arr[n - 1];
+    }
 }
