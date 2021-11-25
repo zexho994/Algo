@@ -16,4 +16,23 @@ public class UniquePaths {
         }
         return arr[m - 1][n - 1];
     }
+
+    /**
+     * 使用2n
+     *
+     * @param m
+     * @param n
+     * @return
+     */
+    public int uniquePaths2(int m, int n) {
+        int[][] arr = new int[2][n];
+        arr[0][0] = 1;
+        arr[1][0] = 1;
+        for (int i = 0; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                arr[i % 2][j] = arr[i % 2][j - 1] + arr[(i + 1) % 2][j];
+            }
+        }
+        return arr[(m + 1) % 2][n - 1];
+    }
 }
