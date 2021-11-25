@@ -27,4 +27,20 @@ public class MinPathSum {
         }
         return arr[grid.length - 1][grid[0].length - 1];
     }
+
+    // n时间复杂度
+    public int minPathSum2(int[][] grid) {
+        int[][] arr = new int[2][grid[0].length];
+        arr[0][0] = grid[0][0];
+        for (int i = 1; i < grid[0].length; i++) {
+            arr[0][i] = grid[0][i] + arr[0][i - 1];
+        }
+        for (int i = 1; i < grid.length; i++) {
+            arr[i % 2][0] = arr[(i + 1) % 2][0] + grid[i][0];
+            for (int j = 1; j < grid[0].length; j++) {
+                arr[i % 2][j] = Math.min(arr[i % 2][j - 1], arr[(i + 1) % 2][j]) + grid[i][j];
+            }
+        }
+        return arr[(grid.length + 1) % 2][grid[0].length - 1];
+    }
 }
