@@ -1,4 +1,4 @@
-package top100;
+package dayplan.day_01;
 
 import struct.ListNode.ListNode;
 
