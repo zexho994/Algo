@@ -25,4 +25,28 @@ public class FindTargetSumWays {
         }
         return arr[nums.length][target + sum];
     }
+
+    public int findTargetSumWays2(int[] nums, int target) {
+        int sum = 0;
+        for (int n : nums) {
+            sum += n;
+        }
+        if (target > sum || target < -sum) {
+            return 0;
+        }
+        int[][] arr = new int[2][2 * sum + 1];
+        arr[0][sum] = 1;
+        for (int i = 1; i <= nums.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                if (arr[(i + 1) % 2][j] == 0) {
+                    continue;
+                }
+                arr[i % 2][j + nums[i - 1]] += arr[(i + 1) % 2][j];
+                arr[i % 2][j - nums[i - 1]] += arr[(i + 1) % 2][j];
+                arr[(i + 1) % 2][j] = 0;
+            }
+        }
+        return arr[nums.length % 2][target + sum];
+    }
+
 }
