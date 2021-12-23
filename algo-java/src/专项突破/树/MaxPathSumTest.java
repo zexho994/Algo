@@ -3,12 +3,12 @@ package 专项突破.树;
 import org.junit.jupiter.api.Test;
 import struct.TreeNode.TreeNode;
 
-class PathSumTest {
+class MaxPathSumTest {
 
     @Test
-    void pathSum() {
+    void maxPathSum() {
+        MaxPathSum maxPathSum = new MaxPathSum();
         TreeNode root = new TreeNode(10);
-        TreeNode node = root;
         root.left = new TreeNode(5);
         root.right = new TreeNode(-3);
         root.left.left = new TreeNode(3);
@@ -16,9 +16,6 @@ class PathSumTest {
         root.right.right = new TreeNode(11);
         root.left.left.left = new TreeNode(3);
         root.left.left.right = new TreeNode(-3);
-
-        PathSum pathSum = new PathSum();
-        int res = pathSum.maxPathSum(root);
-        assert res == 2;
+        maxPathSum.maxPathSum(root);
     }
 }
