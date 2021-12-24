@@ -1,4 +1,4 @@
-package 专项突破.树;
+package 专项突破.树.dfs;
 
 import struct.TreeNode.TreeNode;
 
