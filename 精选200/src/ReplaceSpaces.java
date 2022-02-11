@@ -10,4 +10,17 @@ public class ReplaceSpaces {
         }
         return sb.toString();
     }
+
+    public String replaceSpaces2(String S, int length) {
+        StringBuilder sb = new StringBuilder(S);
+        sb.setLength(length);
+        for (int i = length - 1; i >= 0; i--) {
+            if (sb.charAt(i) == ' ') {
+                sb.replace(i, i + 1, "%20");
+            }
+        }
+        return sb.toString();
+    }
+
+
 }
