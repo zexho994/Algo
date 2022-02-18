@@ -1,4 +1,4 @@
-package 数组;
+package 链表;
 
 import struct.ListNode.ListNode;
 
