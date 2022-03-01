@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/algo-java/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/程序员面试经典/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/剑指offer" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
