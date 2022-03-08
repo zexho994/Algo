@@ -1,4 +1,6 @@
-import java.util.stream.IntStream;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * @author Zexho
@@ -6,9 +8,12 @@ import java.util.stream.IntStream;
  */
 public class GetLeastNumbers {
     public int[] getLeastNumbers(int[] arr, int k) {
-        return IntStream.of(arr)
-                .sorted()
-                .limit(k)
-                .toArray();
+        Queue<Integer> pq = new PriorityQueue(k);
+        Arrays.stream(arr).forEach(pq::add);
+        int[] res = new int[k];
+        for (int i = 0; i < k; i++) {
+            res[i] = pq.poll();
+        }
+        return res;
     }
 }
