@@ -847,6 +847,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/[面试题 03.04]化栈为队.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/doc/content/[面试题 03.04]化栈为队.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com面试题 03.04" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/[面试题 03.04]化栈为队.java" />
+              <option name="titleSlug" value="implement-queue-using-stacks-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/[面试题 04.01]节点间通路.java">
           <value>
             <LeetcodeEditor>
@@ -855,6 +866,17 @@
               <option name="host" value="leetcode-cn.com" />
               <option name="path" value="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/[面试题 04.01]节点间通路.java" />
               <option name="titleSlug" value="route-between-nodes-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/[面试题 04.03]特定深度节点链表.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/doc/content/[面试题 04.03]特定深度节点链表.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com面试题 04.03" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="/var/folders/b1/hwn4fy4j5vld1279kbff0bf40000gn/T/leetcode/editor/cn/[面试题 04.03]特定深度节点链表.java" />
+              <option name="titleSlug" value="list-of-depth-lcci" />
             </LeetcodeEditor>
           </value>
         </entry>
