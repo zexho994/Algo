@@ -7,13 +7,21 @@ package struct.ListNode;
 public class ListNode {
     public int val;
     public ListNode next;
-    public ListNode(){}
-    public ListNode(int v){
+
+    public ListNode() {
+    }
+
+    public ListNode(int v) {
         this.val = v;
     }
 
-    public ListNode addNext(int x){
-        this.next = new ListNode(x);
-        return this.next;
+    public ListNode addNext(int... x) {
+        ListNode head = this;
+        this.val = x[0];
+        for (int i = 1; i < x.length; i++) {
+            head.next = new ListNode(x[i]);
+            head = head.next;
+        }
+        return this;
     }
 }
