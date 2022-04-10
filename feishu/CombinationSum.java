@@ -8,7 +8,7 @@ import java.util.List;
 public class CombinationSum {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> ans = new ArrayList<>();
-        this.find(ans,new ArrayList<Integer>(),candidates,0,target);
+        this.find(ans, new ArrayList<>(),candidates,0,target);
         return ans;
     }
 

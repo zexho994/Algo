@@ -12,4 +12,5 @@ class QuickSortTest {
         int[] ints = quickSort.sortArray(new int[]{5, 2, 3, 4, 1});
         Arrays.stream(ints).forEach(System.out::println);
     }
+
 }
