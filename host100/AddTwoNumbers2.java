@@ -2,7 +2,7 @@
  * @author : zexho
  * @created : 2022-05-16
 **/
-class AddTwoNumbers{
+class AddTwoNumbers2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
         ListNode ans = new ListNode();
