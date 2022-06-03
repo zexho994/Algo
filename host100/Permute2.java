@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @author : zexho
  * @created : 2022-05-28
 **/
-public class Permute{
+public class Permute2{
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();

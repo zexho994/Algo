@@ -5,7 +5,7 @@ import java.util.Set;
  * @author : zexho
  * @created : 2022-05-29
 **/
-public class LongestConsecutive{
+public class LongestConsecutive2{
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>(nums.length);
         for(int n : nums){

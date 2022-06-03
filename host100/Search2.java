@@ -2,7 +2,7 @@
  * @author : zexho
  * @created : 2022-05-22
 **/
-public class Search{
+public class Search2{
     public int search(int[] nums, int target) {
         int left = 0, right = nums.length-1;
         while(left <= right){
